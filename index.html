@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="/chapaa.png" type="image/x-icon">
+    <title>Tapadora de Botellas</title>
+    <script type="text/javascript" loading="lazy" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Mi hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Cdn font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Engargoladora -->
+    <div id="gamearea">
+        <div id="player"></div>
+        <div id="player2"></div>
+        <div id="player3"></div>
+        <div id="player4"></div>
+    </div>
+
+    <!-- Botones para ver Graficas -->
+    <div class="botones">
+        <button id="login" class="boton-log">
+            <i class="fab fa-google fa-2x"></i> Inicia Sesión con Google
+        </button>
+        <button id="Grafica1" class="boton-log">
+            Thermistor 1
+        </button>
+        <button id="Grafica2" class="boton-log">
+            Thermistor 2
+        </button>
+        <button id="Grafica3" class="boton-log">
+            Thermistor 3
+        </button>
+        <button id="Grafica4" class="boton-log">
+            Thermistor 4
+        </button>
+    </div>
+
+    <!-- Los Relojes de temperatura -->
+    <table class="columns">
+        <tr>
+
+            <td>
+                <div class="gauge one" id="chart_Temp1"></div>
+            </td>
+            <td>
+                <div class="gauge" id="chart_Temp2"></div>
+            </td>
+            <td>
+                <div class="gauge" id="chart_Temp3"></div>
+            </td>
+            <td>
+                <div class="gauge" id="chart_Temp4"></div>
+            </td>
+
+        </tr>
+    </table>
+    <!-- Fotos de los Usuarios  -->
+    <div class="fotos">
+        <div id="root"></div>
+    </div>
+
+    <!-- Si desea ver alguna de las graficas -->
+    <div id="chartTime" class="graficas"></div>
+
+
+    <!-- Script Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Scripts Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- Inicio mi Bd -->
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCVOb_5-msij8KSTAOvFkF6mF8KG5mWvRE",
+            authDomain: "automatizacioni2023.firebaseapp.com",
+            databaseURL: "https://automatizacioni2023-default-rtdb.firebaseio.com",
+            projectId: "automatizacioni2023",
+            storageBucket: "automatizacioni2023.appspot.com",
+            messagingSenderId: "878834311737",
+            appId: "1:878834311737:web:aad1d14a2a708c2515e3e8",
+        };
+        // Iniciamos Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Mi Script -->
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>

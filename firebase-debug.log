@@ -1,0 +1,31 @@
+[debug] [2023-03-17T21:02:03.662Z] ----------------------------------------------------------------------
+[debug] [2023-03-17T21:02:03.761Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\josev\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-03-17T21:02:03.771Z] CLI Version:   11.24.1
+[debug] [2023-03-17T21:02:03.771Z] Platform:      win32
+[debug] [2023-03-17T21:02:03.771Z] Node Version:  v18.14.2
+[debug] [2023-03-17T21:02:03.992Z] Time:          Fri Mar 17 2023 17:02:03 GMT-0400 (hora de Venezuela)
+[debug] [2023-03-17T21:02:03.992Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-17T21:02:04.024Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-17T21:02:05.220Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-17T21:02:05.247Z] > authorizing via signed-in user (josevalduz180399@gmail.com)
+[debug] [2023-03-17T21:02:05.248Z] [iam] checking project proyectoautomatizacion-7a20f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-17T21:02:05.262Z] > refreshing access token with scopes: []
+[debug] [2023-03-17T21:02:05.266Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-17T21:02:05.267Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-17T21:02:08.584Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-17T21:02:08.584Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-17T21:02:08.849Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-17T21:02:08.849Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-17T21:02:08.928Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/proyectoautomatizacion-7a20f:testIamPermissions [none]
+[debug] [2023-03-17T21:02:08.928Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/proyectoautomatizacion-7a20f:testIamPermissions x-goog-quota-user=projects/proyectoautomatizacion-7a20f
+[debug] [2023-03-17T21:02:08.928Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/proyectoautomatizacion-7a20f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-17T21:02:14.897Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/proyectoautomatizacion-7a20f:testIamPermissions 200
+[debug] [2023-03-17T21:02:14.897Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/proyectoautomatizacion-7a20f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-17T21:02:14.900Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/proyectoautomatizacion-7a20f [none]
+[debug] [2023-03-17T21:02:45.102Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/proyectoautomatizacion-7a20f
+[debug] [2023-03-17T21:02:46.633Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/proyectoautomatizacion-7a20f
+    at RetryOperation._fn (C:\Users\josev\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project proyectoautomatizacion-7a20f. Please make sure the project exists and your account has permission to access it.

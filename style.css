@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-image: url(/botellasa.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #6699;
+}
+
+#gamearea {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#player {
+    animation-name: animacionBotellas;
+    animation-duration: 8s;
+    position: relative;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    width: 70px;
+    height: 200px;
+    top: 29vh;
+    background-image: url(botellaabierta.png);
+}
+
+@keyframes animacionBotellas {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 31vw;
+    }
+
+    52% {
+        left: 31vw;
+        background-image: none;
+    }
+
+}
+
+#player2 {
+    animation-name: animacionBotellas2;
+    animation-duration: 8s;
+    position: relative;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    width: 70px;
+    height: 200px;
+    top: -1.5vh;
+    left: 31vw;
+}
+
+@keyframes animacionBotellas2 {
+    1% {
+        background-image: url(botellacerrada.png)
+    }
+
+    30% {
+        left: 31vw;
+    }
+
+    50% {
+        left: 92vw;
+    }
+
+    99% {
+        left: 31vw;
+        background-image: none;
+    }
+
+}
+
+#player3 {
+    animation-name: plancha;
+    animation-duration: 8s;
+    position: relative;
+    animation-delay: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    width: 8vw;
+    height: 22vh;
+    top: -54%;
+    left: 30.1vw;
+}
+
+@keyframes plancha {
+    1% {
+        background-image: url(plancha.jpg)
+    }
+
+    5% {
+        top: -40%;
+    }
+
+    20% {
+        top: -40%;
+    }
+
+    30% {
+        top: -54%;
+    }
+
+    60% {
+        background-image: none;
+    }
+}
+
+ #player4 {
+    animation-name: movimiento;
+    animation-duration: 8s;
+    position: relative;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    width: 100px;
+    height: 100px;
+    top: -82vh;
+    left: 3%;
+    border-radius: 50%;
+    background: red;
+}
+
+@keyframes movimiento {
+    0% {
+        background-color: red;
+    }
+
+    5% {
+        transform: scale(.9);
+        background-color: green;
+    }
+
+    80% {
+        transform: scale(.9);
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
+    }
+
+} 
+
+:root{
+    --arriba:#2c7483;
+    --cuerpo:#205295;
+    --sombra:#3e5f8a;
+    --borde:#0A2647;
+}
+.boton-log{
+    position: relative;
+    top: 78vh;
+    margin-left: 5vw;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    font-size: 12px;
+    padding: .5rem 1rem;
+    border: 2px solid var(--borde);
+    border-radius: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    /* text-transform: uppercase; */
+    background-color: var(--arriba);
+    transform-style: preserve-3d;
+    transition: transform .2s linear;
+
+}
+.boton-log:hover{
+    transform: translate(0, .1rem);
+}
+.boton-log::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--cuerpo);
+    box-shadow: 0 0 0 2px var(--borde),0 .625rem 0
+    0 var(--sombra);
+    transform: translate3d(0,.75rem, -.1rem);
+    transition: transform .2s linear,box-shadow .2s linear;
+    
+}
+.boton-log:hover::before{
+    box-shadow: 0 0 0 2px var(--borde), 0 .6rem 0 0 var(--sombra);
+    transform: translate3d(0, .72rem, -1rem);
+}
+.boton-log:active{
+    transform: translate(0, .75rem);
+}
+.boton-log:active::before{
+    box-shadow: 0 0 0 2px var(--borde), 0 .1rem 0 0 var(--sombra);
+    transform: translate3d(0,0,-1rem);
+}
+@keyframes movimiento {
+    0% {
+        background-color: red;
+    }
+
+    5% {
+        transform: scale(.9);
+        background-color: green;
+    }
+
+    80% {
+        transform: scale(.9);
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+
+.gauge{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.one{
+    margin-left: 52vw;
+}
+.fotos{
+    position: relative;
+    top: 60vh;
+}
+/* button{
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        red,blue,deeppink,blue,
+        red,blue,deeppink,blue
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+} */
+
+ .fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1vw;
+  } 
+.graficas{
+    position: absolute;
+    align-items:center;
+    max-width: max-content;
+    left: 100vw;
+    top: 10vh;
+  }
+  .OnOff{
+    
+  }
